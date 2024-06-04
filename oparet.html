@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transfer</title>
+    <link rel="stylesheet" href="operate.css">
+    <script src="oprate.script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="transfer-form">
+            <h2>Transfer Details</h2>
+            <div class="input-group">
+                <label for="account-number">Account Number:</label>
+                <input type="text" id="account-number" placeholder="Enter account number">
+            </div>
+            <div class="input-group">
+                <label for="account-holder">Account Holder Name:</label>
+                <input type="text" id="account-holder" placeholder="Enter account holder name">
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" placeholder="Enter amount">
+            </div>
+            <button id="confirm-btn">Confirm Transfer</button>
+        </div>
+        <div class="notification">
+            <h3 id="notification-text"> </h3>
+        </div>
+    </div>
+</body>
+</html>

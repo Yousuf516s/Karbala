@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your ID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-step {
+            margin-bottom: 20px;
+        }
+        .form-step i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .form-step input[type="file"] {
+            display: none;
+        }
+        .form-step label {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Verify Your ID</h2>
+        <div class="form-step">
+            <i class="fa-thin fa-id-card"></i>
+            <p>Step 1: Upload your ID Card</p>
+            <input type="file" id="id-card" name="id-card">
+            <label for="id-card"><i class="fa-regular fa-upload"></i> Upload ID</label>
+        </div>
+        <div class="form-step">
+            <i class="fa-sharp fa-thin fa-face-viewfinder"></i>
+            <p>Step 2: Verify Your Face</p>
+            <input type="file" id="face-verify" name="face-verify" accept="image/*" capture="user">
+            <label for="face-verify"><i class="fa-regular fa-upload"></i> Upload Face Image</label>
+        </div>
+        <a href="file:///C:/Users/User/OneDrive/Desktop/leon/home.html">
+        <button class="submit-btn">Submit</button>
+        </a>
+    </div>
+</body>
+</html>

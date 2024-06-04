@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmation Code Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter Confirmation Code</h2>
+    <form action="#" method="post" id="confirm_form">
+        <div class="form-group">
+            <label for="confirmation_code">Confirmation Code:</label>
+            <input type="text" id="confirmation_code" name="confirmation_code" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm">
+                <input type="radio" id="confirm" name="confirmation_action" value="confirm">
+                Confirm
+            </label>
+        </div>
+
+        <div class="form-group">
+            <a href="file:///C:/Users/User/OneDrive/Desktop/leon/verify.html">
+            <button type="button" id="confirm_button">Confirm</button>
+            </a>
+        </div>
+
+        
+        <div id="notification" class="notification"></div>
+    </form>
+</div>
+
+<script src="confirm.script.js"></script>
+</body>
+</html>

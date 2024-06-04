@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Forget Password</h2>
+    <form id="forget-password-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit" id="send-button">Send Code</button>
+    </form>
+    <p id="message"></p>
+</div>
+
+<script>
+    document.getElementById('forget-password-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('email').value;
+        var sendButton = document.getElementById('send-button');
+        var message = document.getElementById('message');
+        
+        sendButton.disabled = true;
+        message.textContent = "Sending code...";
+
+        // Simulate sending email and timing
+        setTimeout(function() {
+            sendResetCode(email);
+        }, 2000); // 2 seconds delay for demonstration
+    });
+
+    function sendResetCode(email) {
+        var message = document.getElementById('message');
+        
+        // Here, you would send the email via your server
+        // For this example, we'll just simulate success
+        message.textContent = "A reset code has been sent to " + email;
+
+        // Re-enable the button after some time
+        setTimeout(function() {
+            document.getElementById('send-button').disabled = false;
+            message.textContent = "";
+        }, 60000); // Re-enable after 60 seconds
+    }
+</script>
+
+</body>
+</html>
